@@ -1,6 +1,5 @@
 package com.masai.entities;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,27 +11,23 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table(name = "users")
 public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer userId;
-
-	@Column(name = "user_name", nullable = false)
-	private String userName;
+	private Integer id;
 	
-	@Column(name = "user_email", nullable = false)
-	private String userEmail;
+	private String name;
 	
-	@Column(name = "password", nullable = false)
+	private String email;
+	
 	private String password;
 	
-	@Column(name = "about", nullable = false)
 	private String about;
 
 }
