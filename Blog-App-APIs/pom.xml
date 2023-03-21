@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.2</version>
+		<version>3.0.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.harsh.blog</groupId>
-	<artifactId>Blog-App-APIs</artifactId>
+	<groupId>com.bloggingappapis</groupId>
+	<artifactId>blog-app-apis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Blog-App-APIs</name>
-	<description>This is backend apis app for blogging</description>
+	<name>blog-app-apis</name>
+	<description>This is backed apis for blogging application</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -47,14 +47,16 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-        </dependency>
 	</dependencies>
 
 	<build>
